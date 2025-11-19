@@ -319,19 +319,149 @@ namespace sajidan_ukk_dekstop
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
+            //try
+            //{
+            //    using (XLWorkbook xl = new XLWorkbook())
+            //    {
+            //        string exportLokasi = @"C:\Users\Axioo Pongo\Music\dataProducts.xlsx";
+            //        xl.Worksheets.Add(dt, "products");
+            //        xl.SaveAs(exportLokasi);
+            //        MessageBox.Show("Data berhasil diexport ke: " + exportLokasi, "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error exporting: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
             try
             {
-                using (XLWorkbook xl = new XLWorkbook())
+                // Validasi apakah ada data yang akan diexport
+                if (dt == null || dt.Rows.Count == 0)
                 {
-                    string exportLokasi = @"C:\Users\Axioo Pongo\Music\dataProducts.xlsx";
-                    xl.Worksheets.Add(dt, "products");
-                    xl.SaveAs(exportLokasi);
-                    MessageBox.Show("Data berhasil diexport ke: " + exportLokasi, "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Tidak ada data untuk diexport!", "Peringatan",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+                {
+                    saveFileDialog.Filter = "Excel Workbook (*.xlsx)|*.xlsx|Excel 97-2003 (*.xls)|*.xls";
+                    saveFileDialog.FilterIndex = 1; // Default pilih .xlsx
+                    saveFileDialog.Title = "Simpan Data Produk";
+                    saveFileDialog.FileName = $"data_produk_{DateTime.Now:yyyyMMdd_HHmmss}";
+                    saveFileDialog.DefaultExt = "xlsx";
+
+                    string[] possiblePaths = {
+                Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+                Environment.GetFolderPath(Environment.SpecialFolder.Desktop),
+                @"C:\",
+                Path.GetDirectoryName(Application.ExecutablePath)
+            };
+
+                    foreach (string path in possiblePaths)
+                    {
+                        if (Directory.Exists(path))
+                        {
+                            saveFileDialog.InitialDirectory = path;
+                            break;
+                        }
+                    }
+
+                    saveFileDialog.FileOk += (s, ev) =>
+                    {
+                        string selectedFile = saveFileDialog.FileName;
+                        string extension = Path.GetExtension(selectedFile).ToLower();
+
+                        if (extension != ".xlsx" && extension != ".xls")
+                        {
+                            MessageBox.Show("Harap pilih format file Excel (.xlsx atau .xls)!",
+                                          "Format Tidak Valid",
+                                          MessageBoxButtons.OK,
+                                          MessageBoxIcon.Warning);
+                            ev.Cancel = true;
+                        }
+
+                        if (File.Exists(selectedFile))
+                        {
+                            DialogResult overwrite = MessageBox.Show(
+                                $"File '{Path.GetFileName(selectedFile)}' sudah ada.\nApakah Anda ingin menimpanya?",
+                                "File Sudah Ada",
+                                MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Question);
+
+                            if (overwrite == DialogResult.No)
+                            {
+                                ev.Cancel = true;
+                            }
+                        }
+                    };
+
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        string exportLokasi = saveFileDialog.FileName;
+                        string directory = Path.GetDirectoryName(exportLokasi);
+
+                        // Pastikan direktori ada
+                        {
+                            Directory.CreateDirectory(directory);
+                        }
+
+                        using (ProgressForm progress = new ProgressForm("Mengexport data..."))
+                        {
+                            progress.Show();
+                            Application.DoEvents();
+
+                            using (XLWorkbook xl = new XLWorkbook())
+                            {
+                                var worksheet = xl.Worksheets.Add(dt, "Data Produk");
+
+                                var headerRange = worksheet.Range(1, 1, 1, dt.Columns.Count);
+                                headerRange.Style.Fill.BackgroundColor = XLColor.LightBlue;
+                                headerRange.Style.Font.Bold = true;
+                                headerRange.Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+
+                                // Auto-fit columns
+                                worksheet.Columns().AdjustToContents();
+
+                                xl.SaveAs(exportLokasi);
+                            }
+
+                            progress.Close();
+                        }
+
+                        DialogResult openFile = MessageBox.Show(
+                            $"Data berhasil diexport ke:\n{exportLokasi}\n\nApakah Anda ingin membuka file sekarang?",
+                            "Export Berhasil",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Information);
+
+                        if (openFile == DialogResult.Yes)
+                        {
+                            try
+                            {
+                                System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+                                {
+                                    FileName = exportLokasi,
+                                    UseShellExecute = true
+                                });
+                            }
+                            catch (Exception openEx)
+                            {
+                                MessageBox.Show($"Gagal membuka file: {openEx.Message}",
+                                              "Error",
+                                              MessageBoxButtons.OK,
+                                              MessageBoxIcon.Error);
+                            }
+                        }
+                    }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error exporting: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error exporting data: {ex.Message}",
+                              "Error",
+                              MessageBoxButtons.OK,
+                              MessageBoxIcon.Error);
             }
         }
 

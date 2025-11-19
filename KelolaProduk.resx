@@ -286,7 +286,7 @@
     <value>33, 228</value>
   </data>
   <data name="guna2HtmlLabel7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 22</value>
+    <value>56, 17</value>
   </data>
   <data name="guna2HtmlLabel7.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -445,7 +445,7 @@
     <value>33, 68</value>
   </data>
   <data name="guna2HtmlLabel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 22</value>
+    <value>82, 17</value>
   </data>
   <data name="guna2HtmlLabel5.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -472,7 +472,7 @@
     <value>289, 67</value>
   </data>
   <data name="guna2HtmlLabel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 22</value>
+    <value>32, 17</value>
   </data>
   <data name="guna2HtmlLabel4.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -526,7 +526,7 @@
     <value>33, 149</value>
   </data>
   <data name="guna2HtmlLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 22</value>
+    <value>41, 17</value>
   </data>
   <data name="guna2HtmlLabel3.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -604,7 +604,7 @@
     <value>33, 18</value>
   </data>
   <data name="guna2HtmlLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 33</value>
+    <value>122, 27</value>
   </data>
   <data name="guna2HtmlLabel2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -645,6 +645,21 @@
   <data name="&gt;&gt;guna2Panel2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="guna2Button5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="guna2Button5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>66, 539</value>
+  </data>
+  <data name="guna2Button5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 43</value>
+  </data>
+  <data name="guna2Button5.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="guna2Button5.Text" xml:space="preserve">
+    <value>Logout</value>
+  </data>
   <data name="&gt;&gt;guna2Button5.Name" xml:space="preserve">
     <value>guna2Button5</value>
   </data>
@@ -657,6 +672,21 @@
   <data name="&gt;&gt;guna2Button5.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="guna2HtmlLabel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 16.2pt, style=Bold</value>
+  </data>
+  <data name="guna2HtmlLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>77, 408</value>
+  </data>
+  <data name="guna2HtmlLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 32</value>
+  </data>
+  <data name="guna2HtmlLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="guna2HtmlLabel1.Text" xml:space="preserve">
+    <value>SA Market</value>
+  </data>
   <data name="&gt;&gt;guna2HtmlLabel1.Name" xml:space="preserve">
     <value>guna2HtmlLabel1</value>
   </data>
@@ -668,6 +698,21 @@
   </data>
   <data name="&gt;&gt;guna2HtmlLabel1.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="guna2PictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="guna2PictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>77, 256</value>
+  </data>
+  <data name="guna2PictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 130</value>
+  </data>
+  <data name="guna2PictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="guna2PictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;guna2PictureBox1.Name" xml:space="preserve">
     <value>guna2PictureBox1</value>
@@ -702,90 +747,9 @@
   <data name="&gt;&gt;guna2Panel1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="guna2HtmlLabel1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 16.2pt, style=Bold</value>
-  </data>
-  <data name="guna2HtmlLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>77, 408</value>
-  </data>
-  <data name="guna2HtmlLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 39</value>
-  </data>
-  <data name="guna2HtmlLabel1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="guna2HtmlLabel1.Text" xml:space="preserve">
-    <value>SA Market</value>
-  </data>
-  <data name="&gt;&gt;guna2HtmlLabel1.Name" xml:space="preserve">
-    <value>guna2HtmlLabel1</value>
-  </data>
-  <data name="&gt;&gt;guna2HtmlLabel1.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
-  </data>
-  <data name="&gt;&gt;guna2HtmlLabel1.Parent" xml:space="preserve">
-    <value>guna2Panel1</value>
-  </data>
-  <data name="&gt;&gt;guna2HtmlLabel1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="guna2Button5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt</value>
-  </data>
-  <data name="guna2Button5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>66, 539</value>
-  </data>
-  <data name="guna2Button5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 43</value>
-  </data>
-  <data name="guna2Button5.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="guna2Button5.Text" xml:space="preserve">
-    <value>Logout</value>
-  </data>
-  <data name="&gt;&gt;guna2Button5.Name" xml:space="preserve">
-    <value>guna2Button5</value>
-  </data>
-  <data name="&gt;&gt;guna2Button5.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
-  </data>
-  <data name="&gt;&gt;guna2Button5.Parent" xml:space="preserve">
-    <value>guna2Panel1</value>
-  </data>
-  <data name="&gt;&gt;guna2Button5.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="guna2PictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="guna2PictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>77, 256</value>
-  </data>
-  <data name="guna2PictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 130</value>
-  </data>
-  <data name="guna2PictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="guna2PictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;guna2PictureBox1.Name" xml:space="preserve">
-    <value>guna2PictureBox1</value>
-  </data>
-  <data name="&gt;&gt;guna2PictureBox1.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2PictureBox, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
-  </data>
-  <data name="&gt;&gt;guna2PictureBox1.Parent" xml:space="preserve">
-    <value>guna2Panel1</value>
-  </data>
-  <data name="&gt;&gt;guna2PictureBox1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -794,9 +758,6 @@
   </metadata>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>973, 825</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
